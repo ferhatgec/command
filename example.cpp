@@ -5,5 +5,5 @@ int main() {
         .Arg("Hello world!")
         .Arg("Hi!")
         .Status()
-        .Expect("Hmm. There's an error occured");
+        .Expect("Hmm. There's an error occurred");
 }
