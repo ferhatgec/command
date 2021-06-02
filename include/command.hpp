@@ -51,6 +51,11 @@ public:
         ExitStatus x;
         x.error = std::system((this->command + " " + this->args).c_str()); return x;
     }
+
+    ExitStatus Suppress() noexcept {
+        ExitStatus x;
+        x.error = std::system((this->command + " " + this->args + ">>/dev/null 2>>/dev/null").c_str()); return x;
+    }
 };
 
 namespace process {
